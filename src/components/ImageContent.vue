@@ -1,4 +1,6 @@
 <script setup>
+const BASE = 'AlexPortfolio';
+
 const props = defineProps({
     title: String,
     description: String,
@@ -7,7 +9,7 @@ const props = defineProps({
 })
 
 function getImageUrl(){
-    return '/images/' + props.image;
+    return '/' + BASE + '/images/' + props.image;
 }
 
 </script>
