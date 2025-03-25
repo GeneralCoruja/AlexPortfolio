@@ -19,7 +19,7 @@ function getImageUrl(){
                 <h1 class="title txt-title-medium">{{ title }}</h1>
                 <p class="description txt-large">{{ description }}</p>
                 <div v-if="props.showButtons" class="button-wrapper">
-                    <a href="./uiux.html" class="button txt-button">See more {{ seemore ? 'aaa' : 'bbbb' }}</a>
+                    <a href="./uiux.html" class="button txt-button">See more</a>
                 </div>
             </div>
             <div class="image">
