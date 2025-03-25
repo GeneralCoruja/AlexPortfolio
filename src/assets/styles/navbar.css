@@ -1,0 +1,138 @@
+/* 
+    NAVBAR 
+*/
+
+.navbar{
+    width:100vw; /* fallback */
+    width: 100dvw;
+    height: fit-content;
+    position: fixed;
+    margin-top: 4vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.navbar p, .navbar a{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    color:white;
+    text-decoration: none; 
+    text-wrap: nowrap;
+    text-overflow: clip;
+}
+
+.navbar-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: fit-content;
+    width: 200px;
+    padding: 0px 5px;
+
+    border-radius: 30px;
+    background-color:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    
+    overflow: hidden;
+    text-overflow: clip;
+    transition: all 250ms ease;
+}
+
+.navbar-content.active{
+    width: 500px;
+}
+
+.navbar-content.active p, .navbar-content a{
+    display: none;
+}
+
+.navbar-content.active a, .navbar-content p{
+    display:initial;
+}
+
+.navbar-content .menu-button{
+    padding: 15px 20px;
+    transition: padding 200ms;
+}
+
+.navbar-content .menu-button:hover{
+    padding: 20px 20px;
+}
+
+.navbar-content .navbar-button{
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 25px;
+
+    overflow: hidden;
+    text-wrap: nowrap;
+    align-self: center;
+    background-color: transparent;
+}
+
+.navbar-content .navbar-button:hover{
+    background-color:rgba(255, 255, 255, 0.05);
+}
+
+.navbar .more{
+    display: none;
+}
+
+.navbar .more.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+
+}
+
+.navbar .bar{
+    width: 30px;
+    height: 2px;
+
+    margin: 10px 0px;
+    background-color: darkgray;
+    transition: width 200ms;
+}
+
+.navbar .more p{
+    display: none;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.navbar .more:hover{
+    cursor: pointer;
+}
+
+.navbar .more:hover p{
+    display: flex;
+}
+
+.navbar .more:hover .bar{
+    width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .navbar-content{
+        width:80vw;
+    }
+
+    .navbar-content.show a{
+        font-size: 12px;
+
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #navbar-contact-me{
+        display: none;
+    }
+}
