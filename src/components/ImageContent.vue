@@ -9,7 +9,7 @@ const props = defineProps({
 })
 
 function getImageUrl(){
-    return '/' + BASE + '/images/' + props.image;
+    return '/images/' + props.image;
 }
 
 </script>
